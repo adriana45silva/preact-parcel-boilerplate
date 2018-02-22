@@ -1,0 +1,49 @@
+{
+  "name": "preact-parcel-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adriana Silva",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/templates/index.html",
+    "build": "parcel build ./src/templates/index.html"
+  },
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "source/**/*.scss": ["stylelint --syntax=scss", "git add"],
+    "source/**/*.js": ["eslint", "git add"],
+    "source/**/*.jsx": ["eslint", "git add"]
+  },
+  "lintjs":
+    "eslint -c /app/.eslintrc /app/source/javascripts/**/* -f checkstyle -o eslint.xml",
+  "lintcss": "stylelint --config /app/.stylelintrc /app/source/**/*.scss",
+  "lintjs-local": "eslint -c .eslintrc source/javascripts/**/*",
+  "lintcss-local": "stylelint --config .stylelintrc source/**/*.scss",
+  "browserslist": ["last 2 versions", ">1%"],
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-preact": "^1.1.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "bowser": "^1.9.2",
+    "eslint": "^4.18.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-compat": "^2.2.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.6.2",
+    "pre-commit": "^1.2.2",
+    "preact": "^8.2.7",
+    "preact-router": "^2.6.0",
+    "prettier": "^1.10.2",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.1.0",
+    "stylelint-order": "^0.8.1",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
